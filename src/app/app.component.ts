@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService } from './services/users.service';
+import { DataService } from './services/data.service';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
     totalItems: []
   }; 
     
-  constructor(private service:UsersService) {}
+  constructor(private service:DataService) {}
   ngOnInit() {
     this.getData();
   }

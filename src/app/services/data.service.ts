@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
+
 @Injectable({
   providedIn: 'root'
 })
-export class UsersService {
-  
+export class DataService {
+
   private url = 'http://localhost:8000/api/post';
      
   constructor(private httpClient: HttpClient) { }
@@ -21,5 +21,4 @@ export class UsersService {
       map((obj) => obj)
     );
     }
-
 }
